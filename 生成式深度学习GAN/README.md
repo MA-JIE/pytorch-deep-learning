@@ -14,6 +14,6 @@ https://arxiv.org/pdf/1606.05908.pdf
 
 判别器网络: 以一张图像(真实的或合成的)作为输入,并预测该图像来自训练集还是来自生成器网络.就像鉴别赝品的鉴赏者一样. <p>
 
-
+![image]https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%94%9F%E6%88%90%E5%BC%8F%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0GAN/images/GAN.png
 
   GAN的优化过程不是求损失函数的最小值,而是保持生成与判别两股力量的动态平衡. <p>
