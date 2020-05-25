@@ -1,12 +1,11 @@
-=========
-一.变分自编码器(Variational Autoencoders) <p>
+#一.变分自编码器(Variational Autoencoders) <p>
 基于贝叶斯推理,其目标是潜在的建模,从模型中采样新的数据.<p>
 
 论文参考: <p>
 
 https://arxiv.org/pdf/1606.05908.pdf
-==========
-二.Generative Adversarial Nets: GAN <p>
+
+#二.Generative Adversarial Nets: GAN <p>
 基于博弈论,目的是找到达到纳什均衡的判别器网络和生成器网络 <p>
 
 生成器网络: 以一个潜在空间的随机向量作为输入,并将其解码为一张合成图像.就像伪造达芬奇画作的伪造者一样. <p>
