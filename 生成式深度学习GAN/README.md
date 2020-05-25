@@ -17,3 +17,4 @@ https://arxiv.org/pdf/1606.05908.pdf
 ![整体架构](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%94%9F%E6%88%90%E5%BC%8F%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0GAN/images/GAN.png)
 
   GAN的优化过程不是求损失函数的最小值,而是保持生成与判别两股力量的动态平衡. <p>
+如何定义损失函数是GAN的核心所在.我们希望不断提高判别器辨别是非的能力,又要使生成器不断提升图像质量,使得判别器越来越难判别.故损失函数为两者的和.<p>
