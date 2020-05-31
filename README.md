@@ -1,2 +1,4 @@
 # pytorch-deep-learning
-基于pytorch的deep_learning算法总结
+## 优化算法
+### 梯度下降与随机梯度下降
+#### 一维梯度下降
