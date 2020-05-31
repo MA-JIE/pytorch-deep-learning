@@ -13,3 +13,4 @@
 ![](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/images/2.png) <br>
 在某点x处,我们可以表示出以该点为圆心,半径为"1"的各个方向,向外散发的方向导数,然后我们期望得到使目标函数的值不断减小的同时,其减小的速度也是最快的,即寻找方向导数的最小值,这样是下降最快的方向. <br>
 ![](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/images/3.png)
+![](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/images/4.png)
