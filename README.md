@@ -18,7 +18,8 @@
 #### 随机梯度下降(SGD)
   在深度学习中,当我们构建好目标函数(通常训练数据集中有关各个样本的损失函数的平均)后,若采用梯度下降的方式,每次自变量的迭代更新需要不小的算力,但可以发现对某个样本的损失函数的随机梯度的期望就是整体目标函数的期望,由概率论中期望的公式很容易证得.<br>
   目标函数的定义为:<br>
-  ![](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/images/4.png)
+  ![](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/images/5.png)<br>
   在X处的梯度为:<br>
-  ![](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/images/4.png)
+  ![](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/images/6.png)<br>
+  ![](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/images/7.png)<br>
   
