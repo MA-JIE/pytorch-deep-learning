@@ -27,7 +27,7 @@ tanh(Hyperbolic Tangent)为双曲正切函数,tanh和 sigmoid 相似，都属于
 ![tanh](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/img/tanh.png)
 函数及其导数曲线：<br>
 ![tanh1](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/img/tanh1.png)
-![tanh2](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/img/tanh2.png)
+![tanh2](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/img/tanh2.png) <br>
 相比Sigmoid函数:<br>
 1.tanh的输出范围时(-1, 1)，解决了Sigmoid函数的不是zero-centered输出问题 <br>
 2.幂运算的问题仍然存在 <br>
@@ -37,7 +37,7 @@ tanh(Hyperbolic Tangent)为双曲正切函数,tanh和 sigmoid 相似，都属于
 Relu(Rectified Linear Unit)——修正线性单元函数：该函数形式比较简单，表达式为：relu=max(0, x)<br>
 函数及其导数曲线：<br>
 ![relu](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/img/relu.png)
-![relu](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/img/relu1.png) <br>
+![relu](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/img/relu1.png) <br><br>
 从上图可知，ReLU的有效导数是常数1，解决了深层网络中出现的梯度消失问题，也就使得深层网络可训练。同时ReLU又是非线性函数，所谓非线性，就是一阶导数不为常数；对ReLU求导，在输入值分别为正和为负的情况下，导数是不同的，即ReLU的导数不是常数，所以ReLU是非线性的（只是不同于Sigmoid和tanh，relu的非线性不是光滑的.<br>
 ReLU在x>0下，导数为常数1的特点：<br>
 导数为常数1的好处就是在“链式反应”中不会出现梯度消失，但梯度下降的强度就完全取决于权值的乘积，这样就可能会出现梯度爆炸问题。解决这类问题：一是控制权值，让它们在（0，1）范围内；二是做梯度裁剪，控制梯度下降强度，如ReLU(x)=min(6, max(0,x)).<br>
