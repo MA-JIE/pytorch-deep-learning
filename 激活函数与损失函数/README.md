@@ -11,7 +11,7 @@ Sigmoid和tanh的特点是将输出限制在(0,1)和(-1,1)之间，说明Sigmoid
 sigmoid函数也称为Logistic函数，因为Sigmoid函数可以从Logistic回归（LR）中推理得到，也是LR模型指定的激活函数。<br>
 sigmod函数的取值范围在（0, 1）之间，可以将网络的输出映射在这一范围，方便分析。<br>
 函数表达式以及导数表达式：<br>
-![sigmoid](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/img/sigmoid.png)
+![sigmoid](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/img/sigmoid.png)<br>
 函数以及导数曲线：<br>
 ![sigmoid](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/img/sigmoid2.png)
 优点：平滑曲线且易于求导。<br>
