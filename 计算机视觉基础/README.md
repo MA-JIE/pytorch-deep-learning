@@ -25,6 +25,16 @@
 如下图就是以某个像素为中心，得出的锚框：<br>
 ![anchorbox](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/anchorbox.png) <br>
 #### 交并比(IoU)
+当去衡量锚框与真实框的相似度时，我们引入了交并比的概念：对于两个集合A和B，交集 / 并集<br>
+![交并比](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/IoU.png)
+#### 标注训练集的锚框
+在目标检测的训练集中，对于每个图像，已经标注了真实的边界框以及里面所含目标的类别。在生成锚框之后,我们主要依据与锚框相似的真实边界框的位置和类别信息为锚框标注。<br>
+![dog&&cat](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/dog_cat.png)<br>
+如上图所示，黑色框为真实边界框,记为label1, label2. 0,1,2,3,4,5为锚框，通过左上角和右下角的坐标构造而成。代码如下所示，其坐标值分别除以了图像的宽和高<br>
+![dog&&cat](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/code1.png)<br>
+然后，我们为锚框分配与其相似的真实边界框。<br>
+![dog&&cat](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/anchor_label.png)<br>
+
 
 
 
