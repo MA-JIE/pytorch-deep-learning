@@ -32,7 +32,7 @@
 ![dog&&cat](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/dog_cat.png)<br>
 如上图所示，黑色框为真实边界框,记为label1, label2. 0,1,2,3,4,5为锚框，通过左上角和右下角的坐标构造而成。代码如下所示，其坐标值分别除以了图像的宽和高<br>
 ![dog&&cat](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/code1.png)<br>
-然后，我们为锚框分配与其相似的真实边界框。<br>
+然后，我们为锚框分配与其相似的真实边界框。主要思路为先根据真实边界框，选出与之最为相似的锚框，剩下的锚框再与真实边界框匹配，若IoU大于阈值，则为其分配真实边界框<br>
 ![dog&&cat](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/anchor_label.png)<br>
 
 
