@@ -66,7 +66,16 @@ L = [0.9:dog(0), 0.9:cat(1), 0.8:dog(-1), 0.7:dog(-1)]<br>
 ![code8](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/code8.png)<br>
 
 #### 多尺度检测
-
+如果我们以输入图像的每个像素为中心分别生成多个锚框，那么一张图像上需要标注和预测相当多的锚框，一般我们在输入图像中均匀采样一小部分像素，并以采样像素为中心生成锚框。<br>
+在不同的尺度下，我们可以生成不同数量和不同大小的锚框:<br>
+![feature map](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/fmap1.png)<br>
+如上图所示，假设特征图的高和宽分别为4，我们将在图像上均匀采样4行4列个元素，以其为中心，生成大小为s = 0.15的锚框。<br>
+![feature map](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/fmap2.png)<br>
+如上图所示，假设特征图的高和宽分别为2，我们将在图像上均匀采样2行2列个元素，以其为中心，生成大小为s = 4的锚框。<br>
+![feature map](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/fmap3.png)<br>
+如上图所示，假设特征图的高和宽分别为1，我们将在图像上均匀采样1行1列个元素，以其为中心，生成大小为s = 0.8的锚框。<br>
+至此，我们已经在多个尺度上生成了不同大小的锚框，我们也需要在不同尺度下检测不同大小的目标。下面介绍一种基于卷积神经网络的方法:<br>
+以上方4 x 4的尺度为例，假设该特征图的通道数为10，我们根据10张形状为4 x 4的特征图生成了16组不同中心的锚框，每组含有三个锚框，根据真实边界框的类别和位置，每个锚框将被标注类别和偏移量。在当前尺度下，目标检测模型需要根据输入图像预测h x w 组不同中心的锚框的类别和偏移量。<br>
 
 
 
