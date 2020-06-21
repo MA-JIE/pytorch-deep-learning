@@ -34,6 +34,22 @@
 ![dog&&cat](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/code1.png)<br>
 然后，我们为锚框分配与其相似的真实边界框。主要思路为先根据真实边界框，选出与之最为相似的锚框，剩下的锚框再与真实边界框匹配，若IoU大于阈值，则为其分配真实边界框<br>
 ![dog&&cat](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/anchor_label.png)<br>
+我们通过下方代码来为锚框标注类别和偏移量。<br>
+![code2](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/code2.png)<br>
+返回的结果中含有三项：<br>
+* 锚框标注的类别：<br>
+![code3](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/code3.png)<br>
+* 掩码(mask)变量形状为锚框个数的四倍:<br>
+![code4](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/code4.png)<br>
+* 每个锚框的四个偏移量，负类锚框的偏移量为“0”:<br>
+![code5](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/code5.png)<br>
+对于“偏移量”以及“负类锚框”的定义：
+* 偏移量: <br>
+设锚框A及其被分配的真实边界框B的中心坐标分别为(xa , ya )和(xb , yb ),A和B的宽分别为wa 和 wb ,高分别为ha 和hb,一个常用的技巧是将A的偏移量标注为:<br>
+![偏移量](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/offset.png)<br>
+其中常数的默认值为μx = μy = μw = μh = 0, σx = σy = 0.1, σw = σh = 0.2。<br>
+* 负类锚框: <br>
+如果一个锚框没有被分配真实边界框,我们只需将该锚框的类别设为背景。类别为背景的锚框通常被称为负类锚框,其余则被称为正类锚框。<br>
 
 
 
