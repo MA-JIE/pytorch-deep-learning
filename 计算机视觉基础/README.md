@@ -65,6 +65,7 @@ L = [0.9:dog(0), 0.9:cat(1), 0.8:dog(-1), 0.7:dog(-1)]<br>
 输出中，第一个元素代表预测类别(0:dog, 1:cat)，'-1'代表被移除,第二个元素是置信度，后四个元素为预测边界框左上角x,y以及右下角x,y坐标，值域在0~1之间。最终可视化结果如下:<br>
 ![code8](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89%E5%9F%BA%E7%A1%80/img/code8.png)<br>
 
+#### 多尺度检测
 
 
 
