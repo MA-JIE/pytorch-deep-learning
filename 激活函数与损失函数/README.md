@@ -27,7 +27,6 @@ tanh(Hyperbolic Tangent)为双曲正切函数,tanh和 sigmoid 相似，都属于
 ![tanh](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/img/tanh.png) <br>
 函数及其导数曲线：<br>
 ![tanh1](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/img/tanh1.png) <br>
-![tanh2](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/img/tanh2.png) <br>
 相比Sigmoid函数:<br>
 1.tanh的输出范围时(-1, 1)，解决了Sigmoid函数的不是zero-centered输出问题 <br>
 2.幂运算的问题仍然存在 <br>
