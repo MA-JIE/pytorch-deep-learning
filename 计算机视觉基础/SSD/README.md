@@ -3,5 +3,5 @@ single shot multibox detection(SSD)
 单发多框检测
 ----------------
 该目标检测模型基于边界框，锚框，多尺度检测等概念构建而成.<br>
-[锚框&&多尺度检测](计算机视觉基础/README.md)
+[锚框&&多尺度检测](../README.md)
 
