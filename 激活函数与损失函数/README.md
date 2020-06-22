@@ -34,7 +34,7 @@ tanh(Hyperbolic Tangent)为双曲正切函数,tanh和 sigmoid 相似，都属于
 
 #### 3.ReLu
 Relu(Rectified Linear Unit)——修正线性单元函数：该函数形式比较简单，表达式为：relu=max(0, x)<br>
-函数：<br>
+函数以及导数：<br>
 ![relu](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0%E4%B8%8E%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0/img/relu.png)<br>
 * 从上图可知，ReLU的有效导数是常数1，解决了深层网络中出现的梯度消失问题，也就使得深层网络可训练。同时ReLU又是非线性函数，所谓非线性，就是一阶导数不为常数；对ReLU求导，在输入值分别为正和为负的情况下，导数是不同的，即ReLU的导数不是常数，所以ReLU是非线性的（只是不同于Sigmoid和tanh，relu的非线性不是光滑的.<br>
 * ReLU在x>0下，导数为常数1的特点：<br>
