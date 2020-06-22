@@ -48,4 +48,8 @@ Relu(Rectified Linear Unit)——修正线性单元函数：该函数形式比�
 2.解决了梯度消失问题，收敛速度快于Sigmoid和tanh函数，但要防范ReLU的梯度爆炸 <br>
 3.容易得到更好的模型，但也要防止训练中出现模型'Dead'情况 <br>
 
-
+#### 4.Leaky ReLU, PReLU（Parametric Relu）, RReLU（Random ReLU）
+为了防止模型的'Dead'情况，后人将x<0部分并没有直接置为0，而是给了一个很小的负数梯度值$/alpha$。<br>
+Leaky ReLU中的$/alpha$为常数，一般设置 0.01。这个函数通常比 Relu 激活函数效果要好，但是效果不是很稳定，所以在实际中Leaky ReLu使用的并不多。<br>
+PRelu（参数化修正线性单元） 中的$/alpha$作为一个可学习的参数，会在训练的过程中进行更新。<br>
+RReLU（随机纠正线性单元）也是Leaky ReLU的一个变体。在RReLU中，负值的斜率在训练中是随机的，在之后的测试中就变成了固定的了。RReLU的亮点在于，在训练环节中，AJI(Aggregated Jaccard Index)是从一个均匀的分布U(I,u)中随机抽取的数值。<br>
