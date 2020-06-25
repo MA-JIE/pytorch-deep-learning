@@ -3,7 +3,7 @@ VGG(Visual Geometry Group)
 paper链接:<br>
 https://arxiv.org/abs/1409.1556 <br>
 结构图如下:<br>
-![VGG]() <br>
+![VGG](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%BB%8F%E5%85%B8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/VGG/img/VGG.png) <br>
 # VGG原理
 VGG块的组成规律是:连续使用数个相同的填充为1、窗口形状为3 × 3的卷积层后接上一个步幅为2,窗口形状为2 × 2的最大池化层。卷积层保持输入的高和宽不变,而池化层则对其减半。<br>
 VGG16相比AlexNet的一个改进是采用连续的几个3x3的卷积核代替AlexNet中的较大卷积核（11x11，7x7，5x5）。对于给定的感受野（与输出有关的输入图片的局部大小），采用堆积的小卷积核是优于采用大的卷积核，因为多层非线性层可以增加网络深度来保证学习更复杂的模式，而且代价还比较小（参数更少）。<br>
