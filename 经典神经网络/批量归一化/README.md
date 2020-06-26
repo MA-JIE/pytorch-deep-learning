@@ -8,7 +8,7 @@ BN层能让较深的神经网络的训练变得更加容易,对于输入数据,�
 x = Wu + b <br>
 考 虑 一 个 由m个 样 本 组 成 的 小 批 量, 仿 射 变 换 的 输 出 为 一 个 新 的 小 批 量 B = {x(1) , . . . , x(m) }。它们正是批量归一化层的输入。对于小批量B中任意样本x(i) ∈ Rd , 1 ≤ i ≤ m,批量归一化层的输出同样是d维向量:<br>
 y(i) = BN(x(i)), <br>
-* 首先,对小批量B求均值和方差:
+* 首先,对小批量B求均值和方差:<br>
 ![bn](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%BB%8F%E5%85%B8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/%E6%89%B9%E9%87%8F%E5%BD%92%E4%B8%80%E5%8C%96/img/bn1.png)<br>
 
 
