@@ -12,7 +12,7 @@ NIN网络是第一个提出1×1卷积核的论文,那么1×1卷积核有什么�
 
 # NiN块
 NiN使用1×1卷积层来替代全连接层,从而使空间信息能够自然传递到后面的层中去,下图对比了NiN同AlexNet和VGG等网络在结构上的主要区别(右边为NiN结构).<br>
-![NiN]() <br>
+![NiN](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%BB%8F%E5%85%B8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/NiN/img/NiN.png) <br>
 NiN块是NiN中的基础块。它由一个卷积层加两个充当全连接层的1 × 1卷积层串联而成。其中第一个卷积层的超参数可以自行设置,而第二和第三个卷积层的超参数一般是固定的。<br>
 
 # NiN模型
