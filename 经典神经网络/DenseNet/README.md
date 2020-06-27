@@ -18,6 +18,6 @@ DenseNet是在ResNet发表后深受其影响，同时又更为优秀的一种网
 1. BN + RuLU + 3×3卷积，主要作用为特征提取: <br>
 ![H动图](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%BB%8F%E5%85%B8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/DenseNet/img/H1.gif) <br>
 2. BN + ReLU + 1×1卷积 →输出→ BN + RuLU + 3×3卷积主要作用除了特征提取外，还通过1×1卷积改变通道维控制整体维度，尤其是dense block内靠后的layer. <br>
-![H动图](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%BB%8F%E5%85%B8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/DenseNet/img/H2.gif) <br>
+![H动图](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%BB%8F%E5%85%B8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/DenseNet/img/H2.png) <br>
 # 整体网络结构
 ![DenseNet](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%BB%8F%E5%85%B8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/DenseNet/img/densenet.png) <br>
