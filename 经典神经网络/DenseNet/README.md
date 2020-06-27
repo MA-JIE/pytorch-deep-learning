@@ -21,3 +21,6 @@ DenseNet是在ResNet发表后深受其影响，同时又更为优秀的一种网
 ![H动图](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%BB%8F%E5%85%B8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/DenseNet/img/H2.png) <br>
 # 整体网络结构
 ![DenseNet](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%BB%8F%E5%85%B8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/DenseNet/img/densenet.png) <br>
+
+论文解读:<br>
+https://www.yuque.com/docs/share/a8aea7e9-23df-44d7-af99-77f18d8a52e8?# <br>
