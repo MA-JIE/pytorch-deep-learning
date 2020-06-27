@@ -9,4 +9,15 @@ DenseNet是在ResNet发表后深受其影响，同时又更为优秀的一种网
 ![稠密块](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%BB%8F%E5%85%B8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/DenseNet/img/denseblock.png) <br>
 ![稠密块动图](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%BB%8F%E5%85%B8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/DenseNet/img/denseblock1.gif) <br>
 上图为论文中给出的5层稠密块.<br>
-
+# 过渡层
+稠密块之间的连接称为Transition layer过渡层，过渡层由BN+卷积层+池化层构成. <br>
+由于每个稠密块都会带来通道数的增加,使用过多则会带来过于复杂的模型.过渡层用来控制模型复杂度. 它通过1 × 1卷积层来减小通道数,并使用步幅为2的平均池化层减半高和宽,从而进一步降低模型复杂度.<br>
+在DenseNet的实现里，H有两种版本: <br>
+* BN + RuLU + 3×3卷积 <br>
+* BN + ReLU + 1×1卷积 →输出→ BN + RuLU + 3×3卷积 <br>
+1. BN + RuLU + 3×3卷积，主要作用为特征提取: <br>
+![H动图](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%BB%8F%E5%85%B8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/DenseNet/img/H1.gif) <br>
+2. BN + ReLU + 1×1卷积 →输出→ BN + RuLU + 3×3卷积主要作用除了特征提取外，还通过1×1卷积改变通道维控制整体维度，尤其是dense block内靠后的layer. <br>
+![H动图](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%BB%8F%E5%85%B8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/DenseNet/img/H2.gif) <br>
+# 整体网络结构
+![DenseNet](https://github.com/MA-JIE/pytorch-deep-learning/blob/master/%E7%BB%8F%E5%85%B8%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/DenseNet/img/densenet.png) <br>
