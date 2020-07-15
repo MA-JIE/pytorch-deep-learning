@@ -40,4 +40,4 @@ mini-batch太小会导致收敛变慢，太大容易陷入sharp minima，泛化�
 https://zhuanlan.zhihu.com/p/25723112 <br>
 
 # 9. 损失函数
- [激活函数与损失函数]() <br>
+ [激活函数与损失函数](../激活函数与损失函数) <br>
